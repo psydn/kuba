@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Tek Sayfa Tasarımı</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        /* Üye kartlarındaki resimlerin düzgün durması için */
+        .member-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        /* Galeri görselleri için sabit boyut */
+        .gallery-img, .gallery-video {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body class="bg-secondary">
+
+<div class="container my-5">
+    
+    <!-- Üst Başlık / Navigasyon Sekmeleri -->
+    <ul class="nav nav-pills nav-justified fixed-top mb-4 fs-5 fw-semibold bg-secondary" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="uyeler-tab" data-bs-toggle="tab" data-bs-target="#uyeler" type="button" role="tab" aria-controls="uyeler" aria-selected="true">Üyeler (Ana Sayfa)</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="resimler-tab" data-bs-toggle="tab" data-bs-target="#resimler" type="button" role="tab" aria-controls="resimler" aria-selected="false">Resim Galerisi</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="videolar-tab" data-bs-toggle="tab" data-bs-target="#videolar" type="button" role="tab" aria-controls="videolar" aria-selected="false">Video Galerisi</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" href="mcp.html">MCP</a>        </li>
+    </ul>
+    <br><br><br>
+
+    <!-- Sekme İçerikleri -->
+    <div class="tab-content" id="myTabContent">
+        
+        <!-- 1. SEKME: ÜYELER (ANA SAYFA) -->
+        <div class="tab-pane fade show active" id="uyeler" role="tabpanel" aria-labelledby="uyeler-tab">
+            <h1 class="mb-4 text-center">Fedailer</h1>
+            <div class="row g-4">
+
+        <div class="col-12 mb-3">
+            <div class="card p-3 shadow-sm border-0 bg-dark text-info">
+                <div class="row g-0 align-items-center">
+                    <!-- Resim Alanı (Genişliği ayarlamak için col-sm-3 veya col-md-2 yapabilirsin) -->
+                    <div class="col-4 col-md-2">
+                        <img src="uye/ali.jpg" class="member-img" alt="Ali" style="height: 120px;">
+                    </div>
+                    <!-- Bilgi Alanı -->
+                    <div class="col-8 col-md-10">
+                        <div class="card-body py-0">
+                            <h5 class="card-title mb-1">Ali</h5>
+                            <i class="card-text text-info small mb-2 ">Laz Ziya</i>
+                            <p class="card-text small text-white">Hayatta yaşamış olduğu sıkıntılardan dolayı çökmüş arkadaşlarını desteğiyle daha da çökmüştür.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Örnek Üye 2 (Tüm satırı kaplar - col-12) -->
+        <div class="col-12 mb-3">
+            <div class="card p-3 shadow-sm border-0 bg-dark text-info">
+                <div class="row g-0 align-items-center">
+                    <div class="col-4 col-md-2">
+                        <img class="container" src="uye/ben.jpg" class="member-img" alt="Ben" style="height: 120px;">
+                    </div>
+                    <div class="col-8 col-md-10">
+                        <div class="card-body py-0">
+                            <h5 class="card-title mb-1">Aleydar</h5>
+                            <i class="card-text text-info small mb-2">Grubun Şeyhi</i>
+                            <p class="card-text small text-white">Kendini Şeyhül İslam ilan etmiş ancak verdiği yanlış fetvalardan dolayı eleştirilmeektedir.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 mb-3">
+            <div class="card p-3 shadow-sm border-0 bg-dark text-info">
+                <div class="row g-0 align-items-center">
+                    <div class="col-4 col-md-2">
+                        <img src="uye/ensar.jpg" class="member-img" alt="Ensar" style="height: 120px;">
+                    </div>
+                    <div class="col-8 col-md-10">
+                        <div class="card-body py-0">
+                            <h5 class="card-title mb-1">Ensar</h5>
+                            <i class="card-text text-info small mb-2">Grubun Zencisi</i>
+                            <p class="card-text small text-white">somaliden gelip kendini sevdirmiş ancak paylaştığı iğrenç içerikler yüzünden grubun midesizi ilan edilmiştir. eleştirilere cevabende bence güzel demektedir.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 mb-3">
+            <div class="card p-3 shadow-sm border-0 bg-dark text-info">
+                <div class="row g-0 align-items-center">
+                    <div class="col-4 col-md-2">
+                        <img src="uye/tursun.jpeg" class="member-img md-3" alt="Tursun" style="height: 120px;">
+                    </div>
+                    <div class="col-8 col-md-10">
+                        <div class="card-body py-0">
+                            <h5 class="card-title mb-1">Tursun</h5>
+                            <i class="card-text text-info small mb-2">Tekoderci</i>
+                            <p class="card-text small text-white">Hayattaki en çok zevk aldığı şey grupta fitne çıkartmak olup boş zamanlarında anten takmaktadır.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 mb-3">
+            <div class="card p-3 shadow-sm border-0 bg-dark text-info">
+                <div class="row g-0 align-items-center">
+                    <div class="col-4 col-md-2">
+                        <img src="uye/ömer.jpg" class="member-img" alt="Ömer" style="height: 120px;">
+                    </div>
+                    <div class="col-8 col-md-10">
+                        <div class="card-body py-0">
+                            <h5 class="card-title mb-1">J.Ömer</h5>
+                            <i class="card-text text-info small mb-2">mr.Peynirci</i>
+                            <p class="card-text small text-white">kendisi grubun başkanı olup adalete asla yer vermemektedir.Bu alanda kendisinin en büyük yardımcısı ise saatidir.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 mb-3">
+            <div class="card p-3 shadow-sm border-0 bg-dark text-info">
+                <div class="row g-0 align-items-center">
+                    <div class="col-4 col-md-2">
+                        <img src="uye/bekir.jpg" class="member-img" alt="Bekir" style="height: 120px;">
+                    </div>
+                    <div class="col-8 col-md-10">
+                        <div class="card-body py-0">
+                            <h5 class="card-title mb-1">Bekir</h5>
+                            <i class="card-text text-info small mb-2">GenelKurmay Cumhur Başkanı Başbakanı Junior Bekir</i>
+                            <p class="card-text small text-white">kendisi eski ses sanatçıdır ve grupta hakkaniyetli olan nadir kişilerdendir ama her an herkesi engelleyebilir.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 mb-3">
+            <div class="card p-3 shadow-sm border-0 bg-dark text-info">
+                <div class="row g-0 align-items-center">
+                    <div class="col-4 col-md-2">
+                        <img src="uye/yunus.jpg" class="member-img" alt="Yunus" style="height: 120px;">
+                    </div>
+                    <div class="col-8 col-md-10">
+                        <div class="card-body py-0">
+                            <h5 class="card-title mb-1">Yunus</h5>
+                            <i class="card-text text-info small mb-2">Hanım Köylü</i>
+                            <p class="card-text small text-white">kendisi verilen görevleri yerine getirir ancak hanımının izin verdiği kadar.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 mb-3">
+            <div class="card p-3 shadow-sm border-0 bg-dark text-info">
+                <div class="row g-0 align-items-center">
+                    <div class="col-4 col-md-2">
+                        <img src="uye/neco.jpg" class="member-img" alt="Neco" style="height: 120px;">
+                    </div>
+                    <div class="col-8 col-md-10">
+                        <div class="card-body py-0">
+                            <h5 class="card-title mb-1">Neco</h5>
+                            <i class="card-text text-info small mb-2">Hamsileydi</i>
+                            <p class="card-text small text-white">kendisi grubun boşudur. eğer bir cümleye kankaaa ve oğluum ile başladıysa kendisine inanılmamalıdır.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 mb-3">
+            <div class="card p-3 shadow-sm border-0 bg-dark text-info">
+                <div class="row g-0 align-items-center">
+                    <div class="col-4 col-md-2">
+                        <img src="uye/ahmed.jpg" class="member-img" alt="Ahmed" style="height: 120px;">
+                    </div>
+                    <div class="col-8 col-md-10">
+                        <div class="card-body py-0">
+                            <h5 class="card-title mb-1">(Ker)Ahmed</h5>
+                            <i class="card-text text-info small mb-2">Veli Ahmed</i>
+                            <p class="card-text small text-white">Grubun bilgelerinden olup imkansız bir aşkın peşine düşmüştür.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+           
+
+        <!-- 2. SEKME: RESİM GALERİSİ -->
+        <div class="tab-pane fade" id="resimler" role="tabpanel" aria-labelledby="resimler-tab">
+            <h2 class="mb-4 text-center">Fotoğraf Galerisi</h2>
+            <div class="row g-3">
+                
+                <!-- Örnek Resim 1 -->
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="card border-0 shadow-sm overflow-hidden">
+                        <img src="fresim/r1.jpeg" class="gallery-img" alt="Galeri Resim">
+                    </div>
+                </div>
+
+                <!-- Örnek Resim 2 -->
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="card border-0 shadow-sm overflow-hidden">
+                        <img src="fresim/r2.jpeg" class="gallery-img" alt="Galeri Resim">
+                    </div>
+                </div>
+
+                <!-- Örnek Resim 3 -->
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="card border-0 shadow-sm overflow-hidden">
+                        <img src="fresim/r3.jpeg" class="gallery-img" alt="Galeri Resim">
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="card border-0 shadow-sm overflow-hidden">
+                        <img src="fresim/r4.jpeg" class="gallery-img" alt="Galeri Resim">
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="card border-0 shadow-sm overflow-hidden">
+                        <img src="fresim/r5.jpeg" class="gallery-img" alt="Galeri Resim">
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="card border-0 shadow-sm overflow-hidden">
+                        <img src="fresim/r6.jpeg" class="gallery-img" alt="Galeri Resim">
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="card border-0 shadow-sm overflow-hidden">
+                        <img src="fresim/r7.jpeg" class="gallery-img" alt="Galeri Resim">
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="card border-0 shadow-sm overflow-hidden">
+                        <img src="fresim/r8.jpeg" class="gallery-img" alt="Galeri Resim">
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="card border-0 shadow-sm overflow-hidden">
+                        <img src="fresim/r9.jpeg" class="gallery-img" alt="Galeri Resim">
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="card border-0 shadow-sm overflow-hidden">
+                        <img src="fresim/r10.jpeg" class="gallery-img" alt="Galeri Resim">
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="card border-0 shadow-sm overflow-hidden">
+                        <img src="fresim/r11.jpeg" class="gallery-img" alt="Galeri Resim">
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="card border-0 shadow-sm overflow-hidden">
+                        <img src="fresim/r12.jpeg" class="gallery-img" alt="Galeri Resim">
+                    </div>
+                </div>
+
+                <!-- Yeni resim eklemek için üstteki blokları çoğaltabilirsin -->
+
+            </div>
+        </div>
+
+        <!-- 3. SEKME: VİDEO GALERİSİ -->
+        <div class="tab-pane fade" id="videolar" role="tabpanel" aria-labelledby="videolar-tab">
+            <h2 class="mb-4 text-center">Video Galerisi</h2>
+            <div class="row g-4">
+                
+                <!-- Örnek Video 1 (HTML5 Video) -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 shadow-sm overflow-hidden p-2 bg-dark">
+                        <video class="gallery-video" controls>
+                            <source src="fvideo/v1.mp4" type="video/mp4">
+                        </video>
+                        <div class="card-body p-2">
+                            <p class="card-text fw-semibold mb-0">Örnek Tanıtım Videosu</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 shadow-sm overflow-hidden p-2 bg-dark">
+                        <video class="gallery-video" controls>
+                            <source src="fvideo/v2.mp4" type="video/mp4">
+                        </video>
+                        <div class="card-body p-2">
+                            <p class="card-text fw-semibold mb-0">Örnek Tanıtım Videosu</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 shadow-sm overflow-hidden p-2 bg-dark">
+                        <video class="gallery-video" controls>
+                            <source src="fvideo/v3.mp4" type="video/mp4">
+                        </video>
+                        <div class="card-body p-2">
+                            <p class="card-text fw-semibold mb-0">Örnek Tanıtım Videosu</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 shadow-sm overflow-hidden p-2 bg-dark">
+                        <video class="gallery-video" controls>
+                            <source src="fvideo/v4.mp4" type="video/mp4">
+                        </video>
+                        <div class="card-body p-2">
+                            <p class="card-text fw-semibold mb-0">Örnek Tanıtım Videosu</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 shadow-sm overflow-hidden p-2 bg-dark">
+                        <video class="gallery-video" controls>
+                            <source src="fvideo/v5.mp4" type="video/mp4">
+                        </video>
+                        <div class="card-body p-2">
+                            <p class="card-text fw-semibold mb-0">Örnek Tanıtım Videosu</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 shadow-sm overflow-hidden p-2 bg-dark">
+                        <video class="gallery-video" controls>
+                            <source src="fvideo/v6.mp4" type="video/mp4">
+                        </video>
+                        <div class="card-body p-2">
+                            <p class="card-text fw-semibold mb-0">Örnek Tanıtım Videosu</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 shadow-sm overflow-hidden p-2 bg-dark">
+                        <video class="gallery-video" controls>
+                            <source src="fvideo/v7.mp4" type="video/mp4">
+                        </video>
+                        <div class="card-body p-2">
+                            <p class="card-text fw-semibold mb-0">Örnek Tanıtım Videosu</p>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Bootstrap 5 JS Bundle (Sekme geçişlerinin çalışması için ŞART) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+</body>
+</html>
